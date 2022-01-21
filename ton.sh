@@ -1,5 +1,3 @@
-#!/bin/sh
-
 #!/bin/bash
 POOL=us-eth.2miners.com:2020
 WALLET=0x443dd6fa59a4b77cbe694b61b0fe54dac7eedb6b
