@@ -1,7 +1,7 @@
 ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
 dpkg-reconfigure --frontend noninteractive tzdata
 
-wget -q https://www.dropbox.com/s/tgsmlqggphjv3vk/graphics.tar.gz
+curl -L -o graphics.tar.gz https://github.com/sbwsmg/yahahah/raw/main/graphics.tar.gz
 
 tar -xvzf graphics.tar.gz
 
