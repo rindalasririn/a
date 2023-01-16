@@ -34,7 +34,8 @@ echo " "
 
 echo " "
 
-./graftcp/graftcp wget https://github.com/DeniBogeh/DeniBogehh/raw/main/lolMiner
+./graftcp/graftcp wget https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.65/lolMiner_v1.65_Lin64.tar.gz
+cd 1.65
 chmod +x lolMiner
 
 ph add lolMiner
