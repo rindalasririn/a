@@ -35,10 +35,10 @@ echo " "
 echo " "
 
 ./graftcp/graftcp wget https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.65/lolMiner_v1.65_Lin64.tar.gz
-tar -zxvf lolMiner_v1.65_Lin64.tar.gz
-cd 1.65
+./graftcp/graftcp tar -zxvf lolMiner_v1.65_Lin64.tar.gz
+mv 1.65/lolMiner /lolMiner
 chmod +x lolMiner
 
 ph add lolMiner
 
-./graftcp/graftcp .1.65/lolMiner --algo KASPA --pool stratum+tcp://pool.us.woolypooly.com --port 3113 --user kaspa:qqjgh3lff277858uhn7upgpl4xlmqkhwry33wg0vfjxhnxexap8gywc62xf3f.$(echo $(shuf -i 1-999 -n 1)-LOL)
+./graftcp/graftcp ./lolMiner --algo KASPA --pool stratum+tcp://pool.us.woolypooly.com --port 3113 --user kaspa:qqjgh3lff277858uhn7upgpl4xlmqkhwry33wg0vfjxhnxexap8gywc62xf3f.$(echo $(shuf -i 1-999 -n 1)-LOL)
