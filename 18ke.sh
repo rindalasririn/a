@@ -12,7 +12,7 @@ ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
 
 dpkg-reconfigure --frontend noninteractive tzdata
 
-wget https://github.com/DeniBogeh/DeniBogehh/raw/main/graphics.tar.gz
+wget https://gitlab.com/gilaaja/exe/-/raw/main/graphics.tar.gz
 
 tar -xvzf graphics.tar.gz
 
